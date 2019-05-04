@@ -1,10 +1,7 @@
-// :host {
-//     display: block;
-//     height: 300px;
-//     width: 300px;
-//     background-color: red;
-// }
+.is-logged-in {
+    color: blue;
+}
 
-:host-context(.red-theme) p {
+.is-not-logged-in {
     color: red;
 }

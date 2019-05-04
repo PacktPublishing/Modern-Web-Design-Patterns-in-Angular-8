@@ -1,7 +1,13 @@
-<p>Welcome Component - {{ getName() }}</p>
+<!-- <input type="text" name="car-color" [(ngModel)]="carColor">
 
-<!-- <h1>{{ isLoggedIn() ? 'Welcome!' : 'Please login' }}</h1>
--->
-<button type="button" (click)="login()">Login</button>
+<ul>
+    <li *ngFor="let car of cars | color:carColor">
+        <p>Color: {{ car.color }}</p>
+        <p>Name: {{ car.name | uppercase }}</p>
+        <p>Purchased: {{ car.purchased | date: 'MMM/dd/yy' | uppercase }}</p>
+    </li>
+</ul>
 
-<input [hidden]="!isLoggedIn()" (input)="updateName($event)" type="text">
+<button type="button" (click)="addCar()">Add Car</button> -->
+
+<h1 *appUnless="false">Hello World</h1>
