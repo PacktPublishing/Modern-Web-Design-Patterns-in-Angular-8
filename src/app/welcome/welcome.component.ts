@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { WelcomeService } from './welcome.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,78 +8,18 @@ import { Component, OnInit, Input, Renderer2 } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  @Input() name: string;
-  userIsLoggedIn = false;
-  isLoggedInClass = 'is-logged-in';
-  states = ['Florida', 'Ohio', 'California', 'Texas'];
-  cars = [
-    {
-      color: 'blue',
-      name: 'chevy',
-      purchased: new Date()
-    },
-    {
-      color: 'red',
-      name: 'ford',
-      purchased: new Date()
-    },
-    {
-      color: 'green',
-      name: 'dodge',
-      purchased: new Date()
-    }
-  ];
-  carColor: string;
-
-  constructor(private renderer: Renderer2) {
-  }
-
-  addCar() {
-    const newCar = {
-      color: 'green',
-      name: 'gmc',
-      purchased: new Date()
-    };
-    this.cars.push(newCar);
-    // this.cars = [].concat(this.cars).concat(newCar);
-  }
-
-  getStates() {
-    return this.states.map(state => state.toUpperCase());
-  }
-
-  isLoggedIn() {
-    return this.userIsLoggedIn;
-  }
-
-  login() {
-    this.userIsLoggedIn = !this.userIsLoggedIn;
+  constructor(private welcomeService: WelcomeService) {
   }
 
   ngOnInit() {
-    const element = document.getElementById('welcome-message');
-    // element.classList.add('is-logged-in'); 
-    // element.style.width = '30px';
-    // this.renderer.addClass(element, 'is-logged-in');
-    // this.renderer.setStyle(element, 'color', 'red');
-    console.log(this.cars);
-  }
-
-  setUpperCase() {
-    this.name = this.name.toUpperCase();
-  }
-
-  displayName() {
-    alert(this.name);
   }
 
   getName() {
-    return this.name;
+    return this.welcomeService.getPerson();
   }
 
-  updateName($event: Event) {
-    const element = $event.target as HTMLInputElement;
-    this.name = element.value;
+  updateName() {
+    this.welcomeService.updatePersonName('patel');
   }
 
 }

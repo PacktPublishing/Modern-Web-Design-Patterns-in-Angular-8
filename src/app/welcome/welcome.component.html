@@ -1,13 +1,5 @@
-<!-- <input type="text" name="car-color" [(ngModel)]="carColor">
+<h1>Welcome Component</h1>
 
-<ul>
-    <li *ngFor="let car of cars | color:carColor">
-        <p>Color: {{ car.color }}</p>
-        <p>Name: {{ car.name | uppercase }}</p>
-        <p>Purchased: {{ car.purchased | date: 'MMM/dd/yy' | uppercase }}</p>
-    </li>
-</ul>
+<h4>Welcome Person: {{ getName().name }}</h4>
 
-<button type="button" (click)="addCar()">Add Car</button> -->
-
-<h1 *appUnless="false">Hello World</h1>
+<button (click)="updateName()">Update Person's Name</button>

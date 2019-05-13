@@ -4,25 +4,23 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminModule } from './admin/admin.module';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { ColorPipe } from './welcome/color.pipe';
-import { HighlightDirective } from './welcome/highlight.directive';
-import { UnlessDirective } from './welcome/unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
-    ColorPipe,
-    HighlightDirective,
-    UnlessDirective
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AdminModule
   ],
   providers: [],
+  entryComponents: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
