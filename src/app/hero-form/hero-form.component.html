@@ -1,0 +1,29 @@
+<h1>Hero Form</h1>
+
+<form #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm)">
+
+  <label>Name</label>
+  <input type="text" required [(ngModel)]="model.name" name="name">
+
+  <br>
+  <br>
+
+  <label>Age</label>
+  <input type="text" [(ngModel)]="model.age" name="age">
+
+  <br>
+  <br>
+
+  <label>Power</label>
+  <select [(ngModel)]="model.power" name="power">
+    <option *ngFor="let power of powers" [value]="power">
+      {{ power }}
+    </option>
+  </select>
+
+  <br>
+  <br>
+
+  <button type="submit">Submit</button>
+
+</form>
