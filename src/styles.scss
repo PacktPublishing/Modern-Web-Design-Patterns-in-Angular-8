@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid green;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}
