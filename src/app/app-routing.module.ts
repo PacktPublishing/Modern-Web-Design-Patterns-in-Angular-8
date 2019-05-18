@@ -7,6 +7,8 @@ import { UsersComponent } from './users/users.component';
 import { SingleUserComponent } from './single-user/single-user.component';
 import { UsersResolverService } from './users-resolver.service';
 import { SingleUserResolverService } from './single-user-resolver.service';
+import { LoginComponent } from './login/login.component';
+import { AppGuard } from './app.guard';
 
 const routes: Routes = [
   {
@@ -16,12 +18,21 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersComponent,
-    resolve: { users: UsersResolverService }
+    resolve: { users: UsersResolverService },
+    canActivate: [AppGuard],
+    canActivateChild: [AppGuard],
+    canDeactivate: [AppGuard],
+    children: [
+      {
+        path: ':id',
+        component: SingleUserComponent,
+        resolve: { user: SingleUserResolverService }
+      },
+    ]
   },
   {
-    path: 'users/:id',
-    component: SingleUserComponent,
-    resolve: { user: SingleUserResolverService }
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

@@ -9,6 +9,7 @@ import { WorkHistoryComponent } from './about/work-history/work-history.componen
 import { UsersComponent } from './users/users.component';
 import { SingleUserComponent } from './single-user/single-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     WorkHistoryComponent,
     UsersComponent,
-    SingleUserComponent
+    SingleUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
