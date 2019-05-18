@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
-  RouterStateSnapshot, UrlTree, CanActivate, Router, CanActivateChild, CanDeactivate
+  RouterStateSnapshot, UrlTree, CanActivate, Router, CanActivateChild, CanDeactivate, CanLoad, Route
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AppService } from './app.service';
@@ -10,13 +10,21 @@ import { UsersComponent } from './users/users.component';
 @Injectable({
   providedIn: 'root'
 })
-export class AppGuard implements CanActivate, CanActivateChild, CanDeactivate<UsersComponent> {
+export class AppGuard implements
+  CanActivate,
+  CanActivateChild,
+  CanDeactivate<UsersComponent>,
+  CanLoad {
 
   constructor(
     private appService: AppService,
     private router: Router
   ) {
 
+  }
+
+  canLoad(route: Route) {
+    return this.checkLogin(route.path);
   }
 
   canDeactivate(component: UsersComponent) {
