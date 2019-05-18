@@ -3,13 +3,15 @@
 <nav>
     <ul>
         <li>
-            <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a>
+            <a routerLink="/">Home</a>
         </li>
 
         <li>
-            <!-- <a routerLinkActive="active" [routerLink]="['/about']">About</a> -->
+            <a routerLink="/users">Users</a>
+        </li>
 
-            <button type="button" (click)="routeToAbout()">About</button>
+        <li>
+            <a routerLink="/users/1">Single User</a>
         </li>
 
     </ul>
