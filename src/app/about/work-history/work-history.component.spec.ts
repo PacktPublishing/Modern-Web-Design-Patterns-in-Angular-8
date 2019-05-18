@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NameEditorComponent } from './name-editor.component';
+import { WorkHistoryComponent } from './work-history.component';
 
-describe('NameEditorComponent', () => {
-  let component: NameEditorComponent;
-  let fixture: ComponentFixture<NameEditorComponent>;
+describe('WorkHistoryComponent', () => {
+  let component: WorkHistoryComponent;
+  let fixture: ComponentFixture<WorkHistoryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NameEditorComponent ]
+      declarations: [ WorkHistoryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NameEditorComponent);
+    fixture = TestBed.createComponent(WorkHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

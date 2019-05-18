@@ -1,4 +1,18 @@
 <h1>App Component</h1>
 
-<!-- <app-profile-editor></app-profile-editor> -->
-<app-hero-form></app-hero-form>
+<nav>
+    <ul>
+        <li>
+            <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a>
+        </li>
+
+        <li>
+            <!-- <a routerLinkActive="active" [routerLink]="['/about']">About</a> -->
+
+            <button type="button" (click)="routeToAbout()">About</button>
+        </li>
+
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>

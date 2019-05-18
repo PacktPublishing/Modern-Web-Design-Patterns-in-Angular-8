@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularapp';
+
+  id = 5;
+
+  constructor(private router: Router) {
+
+  }
+
+  routeToAbout() {
+    this.router.navigate(['/about'],
+      { queryParams: { name: 'david' } });
+  }
 }
