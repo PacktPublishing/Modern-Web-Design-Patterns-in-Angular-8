@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Video for only $5 on PacktPub.com](https://www.packtpub.com/product/modern-web-design-patterns-in-angular-8-video/9781789612813)
------
-*The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Modern-Web-Design-Patterns-in-Angular-8-[video]
 
 This is the code repository for [[Modern Web Design Patterns in Angular 8[video]](https://www.packtpub.com/web-development/modern-web-design-patterns-angular-8-video), published by [Packt](https://www.packtpub.com). It contains all the supporting project files necessary to work through the video course from start to finish.
